@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">PDF</th>
+                    <th class="text-center">Graphic</th>
+                    <th class="text-center">Edit</th>
+                    <th class="text-center">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td class="align-middle">{{ book.title  }}</td>
+                        <td class="text-center align-middle"><a href="{{ book.src_link }}"><i class="bi bi-download" style="font-size: 1.5rem; color: black;"></i></a></td>
+                        <td class="text-center align-middle">
+                            {% if book.img_link %}
+                                <img src="{{ book.img_link }}" alt="{{ book.title }}" width="100">
+                            {% else %}
+                                No graphic
+                            {% endif %}
+                        </td>
+                        <td class="text-center align-middle">
+                            <a href="{% url 'books:edit_book' setting_id=setting_id book_id=book.id %}"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: black;"></i></a>
+                        </td>
+                        <td class="text-center align-middle">
+                            <a href="{% url 'books:delete_book' setting_id=setting_id book_id=book.id %}"><i class="bi bi-trash" style="font-size: 1.5rem; color: black;"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td><a class="link-secondary" href="{% url 'books:new_book' setting_id %}"> <i class="bi bi-plus-circle"> Add Book</i> </a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <a href="{% url 'books:edit_setting' setting_id %}" class="btn btn-outline-secondary"><i class="bi bi-pencil-square"> Edit Setting</i></a>
+        <a href="{% url 'books:delete_setting' setting_id %}" class="btn btn-outline-secondary"><i class="bi bi-trash"> Delete Setting</i></a>
+{% endblock content %}

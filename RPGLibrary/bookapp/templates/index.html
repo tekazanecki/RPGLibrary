@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="jumbotron">
+    <h1>Witaj na RPGowej Stronie</h1>
+</div>
+{% endblock header %}
+
+{% block content %}
+<h2>
+    <a href="{% url 'users:login' %}">Zaloguj się</a>
+     aby uzyskać dostęp do zasobów
+</h2>
+<h2>
+    Jeśli chcesz uzyskać konto do przeglądania zasobów albo dodać coś nowego
+    skontaktuj się ze mną na t.e.kazanecki@gmail.com
+</h2>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load bootstrap5 %}
+
+{% block content %}
+<p> Add new book</p>
+<form action="{% url 'books:new_book' setting_id%}" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button name="submit">Add Book</button>
+</form>
+{% endblock content %}

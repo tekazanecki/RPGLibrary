@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (RPGLibrary_4.0)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (Back_DRF)" project-jdk-type="Python SDK" />
+>>>>>>> 3f3fd790c78b8bce6f725bcd28be597510394722
   <component name="PyCharmProfessionalAdvertiser">
     <option name="shown" value="true" />
   </component>

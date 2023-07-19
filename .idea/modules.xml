@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/RPGLibrary_4.0.iml" filepath="$PROJECT_DIR$/.idea/RPGLibrary_4.0.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Back_DRF.iml" filepath="$PROJECT_DIR$/.idea/Back_DRF.iml" />
+>>>>>>> 3f3fd790c78b8bce6f725bcd28be597510394722
     </modules>
   </component>
 </project>

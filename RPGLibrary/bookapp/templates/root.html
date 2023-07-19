@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid-container">
+    {% for setting in settings %}
+        <div class="grid-item">
+            {% if setting.img_link %}
+            <div class="div_image">
+                <a href="{% url 'books:books' setting.id %}">
+                    <img src="{{ setting.img_link }}" alt="{{ setting.name }}" width="400" height="240">
+                </a>
+            </div>
+            {% else %}
+                <div class="div_image">
+                    <p>No image available for this setting.</p>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+        <div class="grid-item">
+        <a href="{% url 'books:new_setting'%}">
+            <div class="div_image">
+                <h6><i class="bi bi-plus-circle"></i></h6>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock content %}

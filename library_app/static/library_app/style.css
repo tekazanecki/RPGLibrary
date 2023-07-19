@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;  /* Odstęp między elementami */
+}
+
+.grid-item {
+    width: 33%;
+}
+
+.div_image {
+    width: 400px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    color: #707071;
+    transition: color 0.3s ease;
+}
+
+.div_image:hover {
+    color: black; /*kolor po najechaniu*/
+}
+
+.div_image h1 {
+    margin: 0;
+}
+
+.div_image i {
+    font-size: 3em;
+}
+
+/* Zmieniamy kolor ikony FontAwesome po najechaniu */
+.div_image:hover i {
+    color: black;
+}
+
+.table_centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div><h1>{{ chapter.title }}</h1></div>
+<div>{{ chapter.content }}</div>
+<a href="{% url 'lib_app:chapters' rpg_setting_id=rpg_setting_id book_id=book_id %}"> << back </a>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Title</th>
+                    <th class="text-center">Short Description</th>
+                    <th class="text-center">Edit</th>
+                    <th class="text-center">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for chapter in chapters %}
+                    <tr>
+                        <td class="align-middle"><a href="{% url 'lib_app:chapter' rpg_setting_id=rpg_setting_id book_id=book_id chapter_id=chapter.id %}">{{ chapter.title  }}</a></td>
+                        <td class="align-middle">{{ chapter.short_description }}</td>
+                        <td class="text-center align-middle">
+                            <a href="{% url 'lib_app:edit_chapter' rpg_setting_id=rpg_setting_id book_id=book_id chapter_id=chapter.id%}"><i class="bi bi-pencil-square" style="font-size: 1.5rem; color: black;"></i></a>
+                        </td>
+                        <td class="text-center align-middle">
+                            <a href="{% url 'lib_app:delete_chapter' rpg_setting_id=rpg_setting_id book_id=book_id chapter_id=chapter.id%}"><i class="bi bi-trash" style="font-size: 1.5rem; color: black;"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td><a class="link-secondary" href="{% url 'lib_app:new_chapter' rpg_setting_id=rpg_setting_id book_id=book_id %}"> <i class="bi bi-plus-circle"> Add Chapter</i> </a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock content %}

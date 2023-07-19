@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<p> Add new book</p>
+<form action="{% url 'lib_app:new_book' rpg_setting_id%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button name="submit">Add Book</button>
+</form>
+{% endblock content %}

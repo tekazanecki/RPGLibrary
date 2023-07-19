@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block content %}
+<p> Edit Chapter </p>
+<form action="{% url 'lib_app:edit_chapter' rpg_setting_id=rpg_setting_id book_id=book_id chapter_id=chapter_id%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button name="submit">Edit Chapter</button>
+</form>
+{% endblock content %}
